@@ -1,6 +1,6 @@
 ---
 title: "free and null"
-date: 2020-11-7T10:03:37+08:00
+date: 2020-11-07T10:03:37+08:00
 draft: false
 tags: ["C"]
 ---
@@ -20,7 +20,7 @@ if (fp)
 這段code的作者早已不可考，但每次都會卡在最後的fclose，同事對此感到不能理解。
 
 我猜測是因為中間的分支太多，作者怕有哪裡沒有fclose，所以在最後做了個檢查。
-但這種寫法其實很有問題，flcose 和 free 這類function並不會把pointer指向null，
+但這種寫法其實很有問題，fclose 和 free 這類function並不會把pointer指向null，
 所以不管有沒有fclose或free，最後的if一定成立，這就導致了double free。
 
 如果一定要檢查有沒有釋放的話，就自己寫個free function，然後把指標指到null
