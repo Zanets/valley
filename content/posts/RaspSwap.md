@@ -34,7 +34,7 @@ CONF_SWAPFILE=/mnt/USB/swap
 
 另一台沒有dphys-swapfile可以用mkswap
 
-```
+```shell
 # Create swap file
 # 1024 * 512M = 524288 block size
 dd if=/dev/zero of=/tmp/testswap bs=1024 count=524288 
@@ -57,7 +57,7 @@ swapoff
 ```
 
 開機自動掛載，在 `/etc/fstab` 加上
-```
+```shell
 /tmp/testswap none swap sw 0 0
 ```
 

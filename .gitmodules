@@ -1,6 +1,6 @@
 [submodule "public"]
 	path = public
-	url = git@github.com:Zanets/valley.github.io.git
+	url = git@github.com:zanetumg/zanetumg.github.io.git
 	branch = master
 [submodule "themes/hugo-PaperMod"]
 	path = themes/hugo-PaperMod
